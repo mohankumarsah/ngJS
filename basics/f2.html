@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basics</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/f2.css">
+    <script src="angularjs/angular.min.js"></script>
+    <script src="script/bootstrap.js"></script>
+    <script src="script/jquery.js"></script>
+    <script src="script/popper.js"></script>
+    <script src="script/f2.js"></script>
+</head>
+<body>
+    
+    <div class="container" ng-app="myModule" ng-controller="formController">
+        <form name="studentForm">
+            <h2>My Form</h2>
+            <div class="form-group">
+                <label for="firstname">First Name</label>
+                <input type="text" name="firstname" id="firstname" class="form-control" minlength="3" maxlength="15"
+                 ng-model="firstname" required>
+                 <span ng-show="studentForm.firstname.$touched && studentForm.firstname.$error.required">First Name is Required</span>
+                 <span ng-show="studentForm.firstname.$touched && studentForm.firstname.$error.minlength">First Name Too Short !!!</span>
+                 <span ng-show="studentForm.firstname.$touched && studentForm.firstname.$error.maxlength">First Name is Too Long !!!</span>
+            </div>
+            <div class="form-group">
+                <label for="lastname">Last Name</label>
+                <input type="text" name="lastname" id="lastname" class="form-control" minlength="3" maxlength="10"
+                ng-model="lastname" required>
+                <span ng-show="studentForm.lastname.$touched && studentForm.lastname.$error.required">Last Name is Required</span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" class="form-control" ng-model="email" required>
+                <span ng-show="studentForm.email.$touched && studentForm.email.$error.required">Email is Required</span>
+                <span ng-show="studentForm.email.$touched && studentForm.email.$error.email">Enter Valid Email Adress !!!</span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" class="form-control" ng-model="password" required> 
+                <span ng-show="studentForm.password.$touched && studentForm.password.$error.required">password is Required</span>
+            </div>
+            <button type="button" class="btn btn-primary" ng-disabled="studentForm.$invalid" ng-click="submit()">Submit</button>
+            <button type="button" class="btn btn-success" ng-click="reset()">Reset</button>
+            
+        </form>
+    </div>
+</body>
+</html>

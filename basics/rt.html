@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basics</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="angularjs/angular.min.js"></script>
+    <script src="angularjs/angular-route.min.js"></script>
+    <script src="script/bootstrap.js"></script>
+    <script src="script/jquery.js"></script>
+    <script src="script/popper.js"></script>
+    <script src="script/rt.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="">
+   <div class="container">
+       <h2>Angular js Sample apllications</h2>
+       <p><a href="#home">Home</a></p>
+       <p><a href="#contacts">Contact Us</a></p>
+       <div ng-view ></div>
+   </div>
+</html>

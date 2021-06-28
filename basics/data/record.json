@@ -1,0 +1,34 @@
+{
+    "record":[
+        {
+            "firstName":"mohan",
+            "lastName":"kumar",
+            "gender":"male",
+            "salary":"2000"
+        },
+        {
+            "firstName":"amar",
+            "lastName":"verma",
+            "gender":"male",
+            "salary":"5000"
+        },
+        {
+            "firstName":"rani",
+            "lastName":"kumari",
+            "gender":"female",
+            "salary":"6000"
+        },
+        {
+            "firstName":"amit",
+            "lastName":"sah",
+            "gender":"male",
+            "salary":"8000"
+        },
+        {
+            "firstName":"anuska",
+            "lastName":"sony",
+            "gender":"female",
+            "salary":"300"
+        }
+    ]
+}
